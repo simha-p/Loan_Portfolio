@@ -45,26 +45,30 @@ The bank has a database with 1500 rows of expense information for analysis, with
 
  ### Tech Stack
 The data analysis for this project will be carried out Power BI. 
-   #### Data Importation: Import the data into the environment.
-   #### Data Cleaning and Manipulation
-   #### Data Exploration and Analysis.
-   #### Data Visualization.
+   ####  Data Importation: Import the data into the environment.
+   ####  Data Cleaning and Manipulation
+   ####  Data Exploration and Analysis.
+   ####  Data Visualization.
 
-**Data Importation & Cleansing: Import data into the power BI  environment and cleanse it by identifying and rectifying errors, missing values, and inconsistencies in the data to ensure its accuracy and reliability.**
 
- **Exploratory Data Analysis: Power BI is utilized to generate descriptive statistics, such as summary statistics, distribution plots.**
+**Data Importation & Cleansing: Import data into the power BI  environment and cleanse it by identifying and rectifying errors, missing values, and 
+   inconsistencies in the data to ensure its accuracy and reliability.**
 
-**Data Visualization: Power BI interactive dashboards and visualization capabilities enable the creation of charts, graphs, and heatmaps to uncover patterns and trends within the loan portfolio data.**
 
-**Reporting & Recommendation: Power BI facilitates the creation of customized reports for stakeholders, including bank executives, risk management teams, and regulators. These reports provide actionable insights and support data-driven decision-making.**
+**Exploratory Data Analysis: Power BI is utilized to generate descriptive statistics, such as summary statistics, distribution plots.**
+
+
+**Data Visualization: Power BI interactive dashboards and visualization capabilities enable the creation of charts, graphs, and heatmaps to uncover patterns and 
+    trends within the loan portfolio data.**
+
+**Reporting & Recommendation: Power BI facilitates the creation of customized reports for stakeholders, including bank executives, risk management teams, and 
+   regulators. These reports provide actionable insights and support data-driven decision-making.**
 
 
 
 
 ## Data Transformation
 For the Visualization Purpose,we add custom columns like age,income,credit score  to simple structure the data for the Loan Dataset file.
-
-**Add Columns -- > Custom Columns**
 
 
 ####            Age Range
@@ -100,16 +104,30 @@ if [Loan Status] = "Paid Off" or [Loan Status]= "In Arrears" then
 else 0.0
 
 
+![Screenshot 2024-07-25 185107](https://github.com/user-attachments/assets/0ea64d9d-a60a-4226-a958-7cc477dda2e7)
+
+
+
 ## Date Table
+
 so we need date table for time intelligence analysis.This DataSet contains the loans distribution analysis of Four Years(2018-2021)
+
 #### create StartDate(1/1/2018),EndDate(31/12/2021)
+
 #### Calculate Total Days: 
+
 Duration=[Duration.Days(EndDate-StartDate)+1]:  1461 days
 
+
 ### List Dates in TimeFrame
+
 List.Dates(StatDate, Duration, #duration(1,0,0,0)) ex:[#duration(day,hour,min,sec)]
 
 Covert list Format of Dates to table to extract Year,Month,Quater,Monthname
+
+![Screenshot 2024-07-25 184933](https://github.com/user-attachments/assets/67cfc901-9b5a-482b-b1c1-4141c422ebda)
+
+
 
 ###             Data Modelling
 Create Relationship Between Loan Organisation Date in Loan Dataset to Date Table. 
