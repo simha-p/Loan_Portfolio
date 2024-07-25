@@ -1,7 +1,7 @@
 # Loan_Portfolio_Risk
+
 MyBank, a financial Security and Prosperity Bank that has carved as a leader in banking Industry,empowering millions of spectrum of financial services.
 
-![WhatsApp Image 2024-07-25 at 6 06 51 PM](https://github.com/user-attachments/assets/c0e58f0e-6bc4-4509-9625-e60ec907659a)
 
 ## Business overview Problem
 Managing Risks associated with these loans to ensure Sustainable growth and Customer Satisfaction.
