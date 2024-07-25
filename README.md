@@ -1,5 +1,7 @@
 # Loan_Portfolio_Risk
 MyBank, a financial Security and Prosperity Bank that has carved as a leader in banking Industry,empowering millions of spectrum of financial services.
+
+
 ## Business overview Problem
 Managing Risks associated with these loans to ensure Sustainable growth and Customer Satisfaction.
 
@@ -7,9 +9,11 @@ MyBank challenge revolves around the management of their vast and diverse loan p
 
 Risk analytics provides the tools and methodologies to analyze vast datasets, identify hidden patterns, and extract actionable insights in real-time. Unlike traditional methods that rely on historical data, risk analytics offers the advantage of adaptability. It can continuously process incoming data, enabling the bank to respond promptly to shifting market dynamics, economic indicators, and emerging risks. By harnessing the predictive power of analytics, the bank can proactively identify potential trouble spots within the portfolio, enabling timely interventions that mitigate losses and uphold the institution's financial.
 
+
 ### Aim of Project
 
 This project carries a lofty mission: to revolutionize the bank's approach to loan portfolio risk assessment. Our endeavor is rooted in the belief that data analytics, powered by advanced tools like Power BI, holds the key to unlocking unparalleled insights. These insights will not only empower the bank to make more informed lending decisions but also to optimize their risk management strategies. 
+
 
 ### Data Description
 
@@ -55,10 +59,12 @@ The data analysis for this project will be carried out Power BI.
 
 
 
+
 ## Data Transformation
 For the Visualization Purpose,we add custom columns like age,income,credit score  to simple structure the data for the Loan Dataset file.
 
 **Add Columns -- > Custom Columns**
+
 
 ####            Age Range
 if [Borrower's age ] >=28 and [Borrower's age]<=34 then "28-34" 
@@ -106,7 +112,11 @@ Covert list Format of Dates to table to extract Year,Month,Quater,Monthname
 
 ###             Data Modelling
 Create Relationship Between Loan Organisation Date in Loan Dataset to Date Table. 
+
+
 ![Screenshot 2024-07-25 134044](https://github.com/user-attachments/assets/ac2aae1e-ed0b-4ee2-8295-b2ff29cedfb0)
+
+
 
 ###             Measures Table(KPI's)
 
@@ -118,6 +128,7 @@ Create Relationship Between Loan Organisation Date in Loan Dataset to Date Table
 **Avg_Income = AVERAGE('loan dataset'[Income])**
 **Avg_Credit Score = AVERAGE('loan dataset'[Credit Score])**
 
+
 ![Screenshot 2024-07-25 150903](https://github.com/user-attachments/assets/df46310e-0882-4001-907e-195154ea9494)
 
 
@@ -127,34 +138,59 @@ Create Relationship Between Loan Organisation Date in Loan Dataset to Date Table
 
 **Calculate year wise Quaterly **
 **Total_Loans(2018)=Total_Loan(2018) = CALCULATE(SUM('loan dataset'[Loan Amount]),'DateTable'[Year] =2018)**
+
 ![Screenshot 2024-07-25 151539](https://github.com/user-attachments/assets/eda35d18-9e23-427a-88b8-2c00c6fadfdf)
 
 **Total_Loan(2019) = CALCULATE(SUM('loan dataset'[Loan Amount]),'DateTable'[Year] =2019)**
+
+
 ![Screenshot 2024-07-25 151551](https://github.com/user-attachments/assets/2b578617-cfe8-423c-b630-0b94560089f4)
 
+
+
 **Total_Loan(2020) = CALCULATE(SUM('loan dataset'[Loan Amount]),'DateTable'[Year] =2020)**
+
+
 ![Screenshot 2024-07-25 151602](https://github.com/user-attachments/assets/fa53df11-f8d3-40bd-b08f-4c9780ba0fa2)
 
+
+
 **Total_Loan(2021) = CALCULATE(SUM('loan dataset'[Loan Amount]),'DateTable'[Year] =2021)**
+
+
 
 ![Screenshot 2024-07-25 151626](https://github.com/user-attachments/assets/38a030c1-1bae-49be-afc4-8b9589d1f4eb)
 
 
+
 **Loan Volume by Marital Status**
+
+
+
 ![Screenshot 2024-07-25 151944](https://github.com/user-attachments/assets/b83ab17e-a558-45ed-921f-43196db0527b)
+
 
 **Loan Volume By Employment Status**
 
+
 ![Screenshot 2024-07-25 151813](https://github.com/user-attachments/assets/37dab747-bf32-4e28-be19-57c110b01d28)
 
+
 **Loan Volume by Age**
+
+
 ![Screenshot 2024-07-25 151732](https://github.com/user-attachments/assets/ce1d49f4-cb34-49d9-af43-212db552b32a)
 
 
 **Loan Trendline by Year and MonthName**
+
+
 ![Screenshot 2024-07-25 152027](https://github.com/user-attachments/assets/2f71441c-e4ae-495f-8a3d-943458720b95)
 
+
+
 ##                 Data Visualiation of Loan Portfolio Overview
+
 
 
 ![Screenshot 2024-07-25 153554](https://github.com/user-attachments/assets/de792b27-32ef-4917-9f44-760325b67eaa)
@@ -164,52 +200,80 @@ Create Relationship Between Loan Organisation Date in Loan Dataset to Date Table
 
 ##                     Loan Status and Types
 
+
 **Paid Off Loan = CALCULATE(COUNTROWS('loan dataset'),'loan dataset'[Loan Status]="Paid Off")**
+
 **Repayment_rate = DIVIDE([Paid Off Loan],[Total Approved Loan],0)**
+
 **Loan In Arrears = CALCULATE(COUNTROWS('loan dataset'),'loan dataset'[Loan Status]="In Arrears")**
+
 **Delinquency_rate = DIVIDE([Loan In Arrears],[Total Approved Loan],0)**
+
 **Defaulted Loans = CALCULATE(COUNTROWS('loan dataset'),'loan dataset'[Loan Status]="defaulted")**
+
 **Default Rate = DIVIDE([Defaulted Loans],[Total Approved Loan],0)**
+
 
 ![Screenshot 2024-07-25 154237](https://github.com/user-attachments/assets/6bbc4271-0adb-4d6b-8f8a-3a8110ea1fe8)
 
+
 ##                       Types of Loans:
+
 ![Screenshot 2024-07-25 154536](https://github.com/user-attachments/assets/d8b267c2-0c57-45cb-86d5-441747047ead)
+
 
 ### Observations:
 
 **Total Mortage Loans= 400 and Mortgage Percentage=26.7%**
+
 **Total Commercial Loans= 372 and Commercial rate=24.8%**
+
 **Total Personal Loans= 370 and Personal rate=24.7%**
+
 **Total Auto Loan= 358 and Auto rate=23.9%**
 
 
-####                  Loan Volume by Loan Status
 
 ####                  Loan Volume by Income
+
 ![Screenshot 2024-07-25 154442](https://github.com/user-attachments/assets/ee19623f-8741-4f12-8d89-7aae324b9549)
 
+
 ####                  Loan Volume by Terms
+
+
 ![Screenshot 2024-07-25 154425](https://github.com/user-attachments/assets/37710bd8-aa62-4dac-9d0d-00230e71857f)
 
+
 ####                  Loan Volume by Amount Range
+
 ![Screenshot 2024-07-25 154552](https://github.com/user-attachments/assets/ffa8ca25-c101-402b-beda-272a9b008686)
 
+
 ####                  Loan Volume by Credit Score
+
 ![Screenshot 2024-07-25 154520](https://github.com/user-attachments/assets/486c15ad-c5b2-4147-86e5-df6950221daf)
 
 
+
 ####                 Data Visualization of Loan Status and Types
+
 
 ![Screenshot 2024-07-25 153859](https://github.com/user-attachments/assets/1514626d-08de-40c0-bca7-96c0ebf20f20)
 
 
 
+
 #                              INSIGHTS:
+
 *Repayment Rate at 61.8% might be considered healthy depending on industry.However Delinquency rate at 21.2% and Default Rate at 17.13% indicating a significant portion of loan portfolio at risk *
+
 *The most loan and interest was seen in 2019 the most borrowed product is Mortage Type *
+
 *35-41 age group had highest sum loan Amount accounted for 26.29 % of Loan Amount*
+
 *Loan Type with highest rate of default was Commercial loan for 2018 and 2019 and mortgage loans for 2020 and 2021*
+
 *In Arrears had $5,322,866 Sum Loan Amount ,Paid off had $16,790,481 and Defaulted had $4,973,421,Signifying that number of borrowers has paid off their debt *
 
 
@@ -219,7 +283,7 @@ Create Relationship Between Loan Organisation Date in Loan Dataset to Date Table
 *Borrowers with Credit scores between 633-743 have highest delay and default rates ,it may be benefical to review and adjust credit scoring model to better predict risk among borrowers within this range.*
 
 ## Targeted Risk Management for Loan Type
-*Givn that Commercial loans had the highest rate of default in 2018-2019 and Mortage in 2020-2021,revising their interest rates to better reflect the associated risk. *
+*Given that Commercial loans had the highest rate of default in 2018-2019 and Mortage in 2020-2021,revising their interest rates to better reflect the associated risk. *
 
 ## Age Group Analysis 
 *The age group of 35-41 has the highest sum loan amount and hence might be a critical demographic for business.Diversifying Portfolio across different age-groups could mitigate the risk.*
