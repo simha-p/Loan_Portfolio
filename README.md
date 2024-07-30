@@ -153,7 +153,7 @@ Create Relationship Between Loan Organisation Date in Loan Dataset to Date Table
 
 
 
-#                 Loan Portfolio Ovrview
+#                 Loan Portfolio Overview
 
 **Calculate year wise Quaterly **
 **Total_Loans(2018)=Total_Loan(2018) = CALCULATE(SUM('loan dataset'[Loan Amount]),'DateTable'[Year] =2018)**
